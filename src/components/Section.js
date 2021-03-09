@@ -17,8 +17,17 @@ const SectionTag = styled.section`
 		color: white;
 		font-size: 42px;
 	}
+	button {
+		background: #00f;
+	}
 `;
-export default function Section({ img, title }) {
+export default function Section({
+	img,
+	title,
+	principalText,
+	buttons,
+	scrollBtn,
+}) {
 	useEffect(() => {
 		const allSections = d.querySelectorAll('section');
 		allSections.forEach((section) => {
@@ -26,5 +35,16 @@ export default function Section({ img, title }) {
 		});
 	}, [img]);
 
-	return <SectionTag data-img={img}>{/* <h1> {title} </h1> */}</SectionTag>;
+	return (
+		<SectionTag data-img={img}>
+			<h1> {title} </h1>
+			<div className="text">
+				<p> {principalText} </p>
+				{Object.values(buttons).map((el) => {
+					return <button> {el}</button>;
+				})}
+				<div className="scroll-btn">{scrollBtn}</div>
+			</div>
+		</SectionTag>
+	);
 }
