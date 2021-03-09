@@ -1,13 +1,18 @@
+import React from 'react';
+
 import './App.css';
 import Header from './components/Header';
 import Section from './components/Section';
 import img from './img';
+
 function App() {
 	return (
 		<>
+			{console.log(img)}
 			<Header></Header>
-			<Section img={img.bgImg1}></Section>
-			<Section img={img.bgImg1}></Section>
+			{Object.values(img).map((value) => (
+				<Section img={value}></Section>
+			))}
 		</>
 	);
 }

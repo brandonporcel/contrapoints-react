@@ -5,7 +5,6 @@ import HeaderNav from './HeaderNav';
 const HeaderTag = styled.header`
 	position: fixed;
 	width: 100%;
-
 	border: 1px solid red;
 	height: 180px;
 	padding: 50px 75px 0;
