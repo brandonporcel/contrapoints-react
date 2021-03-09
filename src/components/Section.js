@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-
+import data from '../data.json';
 const d = document;
 const SectionTag = styled.section`
 	border: 1px solid blue;
@@ -18,7 +18,7 @@ const SectionTag = styled.section`
 		font-size: 42px;
 	}
 `;
-export default function Section({ img }) {
+export default function Section({ img, title }) {
 	useEffect(() => {
 		const allSections = d.querySelectorAll('section');
 		allSections.forEach((section) => {
@@ -26,9 +26,5 @@ export default function Section({ img }) {
 		});
 	}, [img]);
 
-	return (
-		<SectionTag data-img={img}>
-			<h1>Darkness | Contrapoints</h1>
-		</SectionTag>
-	);
+	return <SectionTag data-img={img}>{/* <h1> {title} </h1> */}</SectionTag>;
 }
