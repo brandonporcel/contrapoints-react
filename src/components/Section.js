@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const d = document;
 const SectionTag = styled.section`
 	border: 1px solid blue;
-	height: 640px;
+	height: 650px;
 	width: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -14,8 +14,8 @@ const SectionTag = styled.section`
 	align-items: center; */
 	.wrapper {
 		border: 5px solid green;
-
-		height: calc(640px - 180px);
+		position: relative;
+		height: calc(650px - 180px);
 		margin-top: 180px;
 		.title-ctn {
 			width: 100vw;
@@ -58,6 +58,20 @@ const SectionTag = styled.section`
 					color: #000;
 				}
 			}
+		}
+		.text {
+			display: flex;
+			justify-content: center;
+			p {
+				width: 70%;
+			}
+		}
+		.scroll-btn {
+			position: absolute;
+			bottom: 10px;
+
+			font-size: 24px;
+			cursor: pointer;
 		}
 	}
 `;
@@ -105,7 +119,9 @@ export default function Section({
 						</div>
 					);
 				})}
-				<div className="scroll-btn">{scrollBtn}</div>
+				<div className="cta-ctn">
+					<span className="scroll-btn">{scrollBtn}</span>
+				</div>
 			</article>
 		</SectionTag>
 	);
