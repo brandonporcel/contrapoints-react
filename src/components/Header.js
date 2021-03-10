@@ -20,9 +20,9 @@ const HeaderTag = styled.header`
 export default function Header() {
 	return (
 		<HeaderTag>
-			<div className="logo-ctn">
+			<a href="/" className="logo-ctn">
 				<img src={logo} alt="" />
-			</div>
+			</a>
 			<HeaderNav></HeaderNav>
 		</HeaderTag>
 	);
