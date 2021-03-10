@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-
+import ScrollBtn from './ScrollBtn';
 const d = document;
 const SectionTag = styled.section`
 	border: 1px solid blue;
@@ -64,19 +64,14 @@ const SectionTag = styled.section`
 			justify-content: center;
 			p {
 				width: 70%;
+				color: rgba(255, 255, 255, 0.63);
 			}
-		}
-		.scroll-btn {
-			position: absolute;
-			bottom: 10px;
-
-			font-size: 24px;
-			cursor: pointer;
 		}
 	}
 `;
 
 export default function Section({
+	id,
 	img,
 	title,
 	principalText,
@@ -87,8 +82,7 @@ export default function Section({
 	useEffect(() => {
 		const allSections = d.querySelectorAll('section');
 		allSections.forEach((section) => {
-			// section.style.backgroundImage = `url(${section.dataset.img})`;
-			section.style.background = `${section.dataset.color}`;
+			section.style.backgroundImage = `url(${section.dataset.img})`;
 		});
 	}, [img]);
 
@@ -119,9 +113,7 @@ export default function Section({
 						</div>
 					);
 				})}
-				<div className="cta-ctn">
-					<span className="scroll-btn">{scrollBtn}</span>
-				</div>
+				<ScrollBtn id={id} scrollBtn={scrollBtn}></ScrollBtn>
 			</article>
 		</SectionTag>
 	);

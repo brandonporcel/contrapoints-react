@@ -12,7 +12,8 @@ function App() {
 			{data.map((info, index) => (
 				<Section
 					key={index}
-					img={info.img}
+					id={info.id}
+					img={info.imgg}
 					title={info.title}
 					principalText={info.principalText}
 					buttons={info.buttons}
