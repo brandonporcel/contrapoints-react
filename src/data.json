@@ -9,7 +9,8 @@
 			"watch": "Watch Now",
 			"read": "read"
 		},
-		"scroll": "⬇️"
+		"scroll": "⬇️",
+		"color": "orange"
 	},
 	{
 		"title": "About",
@@ -18,7 +19,8 @@
 			"patreon": "patreon now!"
 		},
 		"img": "/static/media/Gallery9.f21e82a5.jpg",
-		"scroll": "⬇️"
+		"scroll": "⬇️",
+		"color": "skyblue"
 	},
 	{
 		"title": "Canceling | ContraPoints",
@@ -28,6 +30,7 @@
 			"read": "read→"
 		},
 		"img": "/static/media/she.0cbeb1ef.jpg",
-		"scroll": "🔝"
+		"scroll": "🔝",
+		"color": "purple"
 	}
 ]

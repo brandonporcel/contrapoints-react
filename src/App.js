@@ -9,13 +9,15 @@ function App() {
 	return (
 		<>
 			<Header></Header>
-			{data.map((info) => (
+			{data.map((info, index) => (
 				<Section
+					key={index}
 					img={info.img}
 					title={info.title}
 					principalText={info.principalText}
 					buttons={info.buttons}
 					scrollBtn={info.scroll}
+					color={info.color}
 				></Section>
 			))}
 		</>
