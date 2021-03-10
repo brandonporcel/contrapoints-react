@@ -26,6 +26,7 @@ const CtaContainer = styled.div`
 		}
 	}
 `;
+
 export default function Buttons({ buttons }) {
 	return (
 		<>
