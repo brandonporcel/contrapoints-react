@@ -40,7 +40,20 @@ export default function HeaderNav() {
 		}
 	}, [li]);
 
-	useEffect(() => {}, [a]);
+	useEffect(() => {
+		d.addEventListener('mouseover', (e) => {
+			if (e.target.matches('.nav-li a')) {
+				// e.target.style.color = 'green ';
+				e.target.style.background = 'blue !important';
+				setA(true);
+			}
+		});
+		// d.addEventListener('mouseout', (e) => {
+		// 	if (e.target.matches('.nav-li a')) {
+		// 		setA(false);
+		// 	}
+		// });
+	}, [a]);
 	return (
 		<NavTag>
 			<ul>
