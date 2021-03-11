@@ -10,6 +10,7 @@ const NavTag = styled.nav`
 			padding: 5px 15px;
 			margin-right: 3px;
 			margin-left: 3px;
+			color: #fff;
 			a {
 				padding: 3px;
 				color: #fff;
@@ -20,13 +21,15 @@ const NavTag = styled.nav`
 				font-size: 13px;
 				letter-spacing: 2px;
 				text-transform: uppercase;
+				&:hover {
+					color: #fff !important;
+				}
 			}
 		}
 	}
 `;
 export default function HeaderNav() {
 	const [li, setLi] = useState(false);
-	const [a, setA] = useState(false);
 
 	useEffect(() => {
 		if (li === true) {
@@ -35,25 +38,11 @@ export default function HeaderNav() {
 			});
 		} else {
 			d.querySelectorAll('.nav-li a').forEach((el) => {
-				el.style.color = 'rgba(255,255,255,1)';
+				el.style.color = 'inherit';
 			});
 		}
 	}, [li]);
 
-	useEffect(() => {
-		d.addEventListener('mouseover', (e) => {
-			if (e.target.matches('.nav-li a')) {
-				// e.target.style.color = 'green ';
-				e.target.style.background = 'blue !important';
-				setA(true);
-			}
-		});
-		// d.addEventListener('mouseout', (e) => {
-		// 	if (e.target.matches('.nav-li a')) {
-		// 		setA(false);
-		// 	}
-		// });
-	}, [a]);
 	return (
 		<NavTag>
 			<ul>

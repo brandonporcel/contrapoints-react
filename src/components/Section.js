@@ -6,8 +6,7 @@ import SectionText from './SectionText';
 import SectionTitle from './SectionTitle';
 const d = document;
 const SectionTag = styled.section`
-	border: 1px solid blue;
-	height: 650px;
+	height: 660px;
 	width: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -15,10 +14,9 @@ const SectionTag = styled.section`
 	background-attachment: fixed;
 
 	.wrapper {
-		border: 5px solid green;
 		position: relative;
-		height: calc(650px - 180px);
-		margin-top: 180px;
+		height: 660px;
+		padding-top: 180px;
 	}
 `;
 

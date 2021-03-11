@@ -4,8 +4,8 @@ import logo from '../assets/images/logo_white.png';
 import HeaderNav from './HeaderNav';
 const HeaderTag = styled.header`
 	position: fixed;
+	z-index: 1;
 	width: 100vw;
-	border: 1px solid red;
 	height: 180px;
 	padding: 50px 75px 0;
 	display: flex;
