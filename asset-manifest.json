@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/contrapoints-react/static/css/main.8eed1d2d.chunk.css",
+    "main.js": "/contrapoints-react/static/js/main.e9cd20a0.chunk.js",
+    "main.js.map": "/contrapoints-react/static/js/main.e9cd20a0.chunk.js.map",
+    "runtime-main.js": "/contrapoints-react/static/js/runtime-main.9de03a63.js",
+    "runtime-main.js.map": "/contrapoints-react/static/js/runtime-main.9de03a63.js.map",
+    "static/js/2.2e97d0bc.chunk.js": "/contrapoints-react/static/js/2.2e97d0bc.chunk.js",
+    "static/js/2.2e97d0bc.chunk.js.map": "/contrapoints-react/static/js/2.2e97d0bc.chunk.js.map",
+    "index.html": "/contrapoints-react/index.html",
+    "static/css/main.8eed1d2d.chunk.css.map": "/contrapoints-react/static/css/main.8eed1d2d.chunk.css.map",
+    "static/js/2.2e97d0bc.chunk.js.LICENSE.txt": "/contrapoints-react/static/js/2.2e97d0bc.chunk.js.LICENSE.txt",
+    "static/media/logo_white.9eaec466.png": "/contrapoints-react/static/media/logo_white.9eaec466.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9de03a63.js",
+    "static/js/2.2e97d0bc.chunk.js",
+    "static/css/main.8eed1d2d.chunk.css",
+    "static/js/main.e9cd20a0.chunk.js"
+  ]
+}
