@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 const d = document;
 const NavTag = styled.nav`
@@ -25,25 +25,37 @@ const NavTag = styled.nav`
 	}
 `;
 export default function HeaderNav() {
+	const [li, setLi] = useState(false);
+	const [a, setA] = useState(false);
+
 	useEffect(() => {
-		d.addEventListener('mouseover', (e) => {
-			if (e.target.matches('.nav-li')) {
-				d.querySelectorAll('.nav-li a').forEach((el) => {
-					el.style.color = 'rgba(255,255,255,.4)';
-				});
-			}
-			if (e.target.matches('.nav-li a') || !e.target.matches('.nav-li')) {
-				e.target.style.color = 'white';
-			}
-		});
-	}, []);
+		if (li === true) {
+			d.querySelectorAll('.nav-li a').forEach((el) => {
+				el.style.color = 'rgba(255,255,255,.4)';
+			});
+		} else {
+			d.querySelectorAll('.nav-li a').forEach((el) => {
+				el.style.color = 'rgba(255,255,255,1)';
+			});
+		}
+	}, [li]);
+
+	useEffect(() => {}, [a]);
 	return (
 		<NavTag>
 			<ul>
-				<li className="nav-li">
+				<li
+					onMouseOver={() => setLi(true)}
+					onMouseOut={() => setLi(false)}
+					className="nav-li"
+				>
 					<a href="/">home</a>{' '}
 				</li>
-				<li className="nav-li">
+				<li
+					onMouseOver={() => setLi(true)}
+					onMouseOut={() => setLi(false)}
+					className="nav-li"
+				>
 					<a
 						href="https://www.contrapoints.com/transcripts"
 						target="_blank "
@@ -52,7 +64,11 @@ export default function HeaderNav() {
 						transcripts
 					</a>{' '}
 				</li>
-				<li className="nav-li">
+				<li
+					onMouseOver={() => setLi(true)}
+					onMouseOut={() => setLi(false)}
+					className="nav-li"
+				>
 					<a
 						href="https://www.contrapoints.com/media"
 						target="_blank "
